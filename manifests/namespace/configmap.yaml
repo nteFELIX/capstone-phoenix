@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: taskapp-config
+  namespace: taskapp
+data:
+  DATABASE_URL: postgresql://taskapp:$(DB_PASSWORD)@postgres-service:5432/taskapp
+  CORS_ORIGINS: https://taskapp.odabefelix.name.ng
+  FLASK_ENV: production
